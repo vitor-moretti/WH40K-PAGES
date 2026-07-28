@@ -1,0 +1,132 @@
+/*  FUNDO ANIMADO (floresta sombria + névoa) */
+.tema-lion {
+    background: linear-gradient(-45deg, #0b1a13, #13261d, #0a1410, #1f3328);
+    background-size: 400% 400%;
+    animation: fundoLion 14s ease infinite;
+    color: #e8f5e9;
+}
+
+/* animação do fundo */
+@keyframes fundoLion {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* container */
+.tema-lion .pagina {
+    background-color: rgba(10, 20, 15, 0.95);
+    border-left: 5px solid #c0a060;
+    box-shadow: 0 0 25px rgba(192,160,96,0.2);
+}
+
+/*  TÍTULO COM GLOW DISCRETO */
+.tema-lion h1 {
+    color: #c0a060;
+    animation: glowLion 2.5s ease-in-out infinite alternate;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    line-height: 1.2;
+}
+
+/* animação do brilho */
+@keyframes glowLion {
+    from {
+        text-shadow: 0 0 5px #c0a060;
+    }
+    to {
+        text-shadow: 0 0 15px #e0c080;
+    }
+}
+
+/* subtítulos */
+.tema-lion h2 {
+    border-bottom: 2px solid #406b5a;
+    color: #ffffff;
+    font-size: clamp(1.05rem, 3.6vw, 1.35rem);
+}
+
+/* destaque */
+.tema-lion .destaque {
+    color: #c0a060;
+    font-weight: bold;
+}
+
+/*MOBILE-FIRST*/
+.tema-lion .topo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tema-lion .primarca-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+
+    border: 3px solid #406b5a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(64,107,90,0.5);
+    filter: brightness(0.9) contrast(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* efeito hover */
+.tema-lion .primarca-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(192,160,96,0.6);
+    filter: brightness(1.1) contrast(1.2);
+}
+
+.tema-lion .resumo p {
+    font-size: clamp(1rem, 3.8vw, 1.25rem);
+    line-height: 1.55;
+}
+
+.tema-lion .conteudo {
+    padding-bottom: 6px;
+}
+
+.tema-lion .nav {
+    display: flex;
+    gap: 12px;
+    padding: 16px 0;
+}
+
+.tema-lion .nav a {
+    width: fit-content;
+}
+
+/* links */
+.tema-lion a {
+    color: #406b5a;
+    transition: 0.3s;
+}
+
+.tema-lion a:hover {
+    color: #c0a060;
+}
+
+/*DESKTOP ENHANCE*/
+@media (min-width: 768px) {
+    .tema-lion .topo {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .tema-lion .primarca-image {
+        width: 250px;
+        max-width: none;
+        border-radius: 8px;
+    }
+
+    .tema-lion .resumo p {
+        font-size: 1.6rem;
+    }
+
+    .tema-lion .nav {
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
+
